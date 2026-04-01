@@ -94,7 +94,10 @@ function Compose() {
     <div className={styles.container}>
       {/* SIDEBAR */}
       <div className={styles.sidebar}>
-        <h2>Recipients</h2>
+        <div className={styles.sidebarHeader}>
+          <img src="images/logo.png" className={styles.logo} />
+          <h2>Recipients</h2>
+        </div>
 
         {/* 📁 FILE UPLOAD */}
         <div className={styles.section}>
