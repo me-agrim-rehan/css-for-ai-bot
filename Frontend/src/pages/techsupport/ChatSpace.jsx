@@ -158,7 +158,11 @@ function ChatSpace() {
     <div className={styles.container}>
       {/* Sidebar */}
       <div className={styles.sidebar}>
-        <h3 className={styles.sidebarTitle}>Conversations</h3>
+
+        <div className={styles.sidebarHeader}>
+          <img src="images/logo.png" className={styles.logo} />
+          <h3>Conversations</h3>
+        </div>
 
         {conversations.map((chat) => {
           const isOwnedByOther =
@@ -167,9 +171,8 @@ function ChatSpace() {
           return (
             <div
               key={chat.id}
-              className={`${styles.userItem} ${
-                selectedChat?.id === chat.id ? styles.activeUser : ""
-              } ${isOwnedByOther ? styles.lockedChat : ""}`}
+              className={`${styles.userItem} ${selectedChat?.id === chat.id ? styles.activeUser : ""
+                } ${isOwnedByOther ? styles.lockedChat : ""}`}
               onClick={() => handleSelectChat(chat)}
             >
               <div>
